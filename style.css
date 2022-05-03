@@ -1,0 +1,218 @@
+ body{
+  background: black;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.moon{
+  background-image: url('./assets/moon.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: 1s;
+  overflow-x: hidden;
+}
+
+.wrapper{
+  height: 100vh;
+  overflow-y: hidden;
+  position: relative; 
+  overflow-x: hidden;
+}
+.left{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  height: 100vh;
+  width: 50vw;
+  overflow-x:hidden;
+}
+.right{
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100vh;
+  z-index: 2;
+  width: 50vw;
+  overflow-x:hidden;
+}
+.circles{
+  transition: 1s;
+  display: flex;
+    justify-content: center;
+    z-index: 3;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    left: 49%;
+    transform: translate(-60%,-50%);
+}
+.circle{
+  position: absolute;
+
+}
+.circle-right{
+  animation: spin-right  linear infinite;
+}
+.circle-left{
+  animation: spin-left linear infinite;
+}
+.cloud{
+  position: absolute;
+  height: 200px;
+  width: 500px;
+  opacity: 0.4;
+}
+/* .cloud-left{
+  left: -500px;
+animation: move-right linear infinite ;
+animation-direction: alternate;
+}
+.cloud-right{
+  left: 100%;
+animation: move-left linear infinite;
+animation-direction: alternate;
+} */
+.content{
+  height: 100vh;
+}
+.itachi{
+z-index: 2;
+position: absolute;
+top: 20px;
+height: 100vh;
+bottom: 0%;
+left: 50%;
+transform: translateX(-50%);
+}
+
+@keyframes spin-left{
+  0%{
+        transform:rotateZ(calc(100%/5)) ; 
+  }
+  100% { 
+        transform:rotateZ(360deg); 
+    } 
+}
+@keyframes spin-right{
+  0%{
+        transform:rotateZ(calc(100%/5)); 
+  }
+  100% { 
+        transform:rotateZ(-360deg); 
+    } 
+}
+/* @keyframes move-left{
+  0%{
+        left: 1000px;
+  }
+  100% { 
+        left: -500px;
+    } 
+}
+@keyframes move-right{
+  0%{
+        left: -500px;
+  }
+  100% { 
+        left: 1000px;
+    } 
+} */
+/*
+.rightCrows,.leftCrows{
+ position: absolute;
+    z-index: 99;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+.leftCrows{
+    left: 0;
+}
+.rightCrows{
+  right: 0;
+}
+.leftCrows .crowsImage{
+  position: absolute;
+    left: -300%;
+
+}
+.rightCrows  .crowsImage{   
+   position: absolute;
+    right: -300%;
+  }
+  .i1{
+    top: 50%;
+    display: none;
+  
+  }
+
+.i2{
+  opacity: 0;
+}
+.i3{
+  display: none;
+}
+.itachi-wrapper{
+  bottom: 0;
+  height: 100%;
+}
+.blood{
+  opacity: 0;
+
+}
+.animation .i1{
+      animation: slideup 2s ;
+    animation-fill-mode: forwards;
+    display: block;
+}
+.animation .rightCrows  .crowsImage{
+    animation: slideRight 4500ms 1s;
+}
+.animation .leftCrows .crowsImage{
+    animation: slideLeft 4500ms 1s;
+  }
+.animation .i2{
+    animation: appear 1ms 2100ms;
+  animation-fill-mode: forwards;
+}
+.animation .blood{
+   animation: appear 2s 1000ms;
+  animation-fill-mode: forwards;
+}
+@keyframes slideRight {
+  0%{
+    right: -300%;
+  }
+  100%{
+right: 300%;
+  }
+  
+}
+@keyframes slideLeft {
+  0%{
+    left: -300%;
+  }
+  100%{
+left: 300%;
+  }
+  
+}
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  100%{
+opacity: 1;
+  }
+}
+@keyframes slideup {
+  0%{  
+     top: 50%;
+    }
+  100%{   
+    top: 0;
+  }
+} */
